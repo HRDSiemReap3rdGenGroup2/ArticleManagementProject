@@ -7,20 +7,10 @@ public class MyTest {
 	Article article;
 	MyTest(){
 		//add new
-		for(int i=0;i<5;i++){
+		for(int i=0;i<9;i++){
 			article=new Article(list, "my_title", "my_author", "my_content");
 			list.add(article);
 			article=null;
-		}
-
-		article=new Article(list, "my_title", "A", "my_content");
-		list.add(article);
-		article=null;	
-		
-		for(int i=0;i<4;i++){
-			article=new Article(list, "my_title", "my_author", "my_content");
-			list.add(article);
-			article=null;	
 		}
 		System.out.println("Add success!");
 //		//remove id = 5======================================================

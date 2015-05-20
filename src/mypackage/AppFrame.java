@@ -1,12 +1,14 @@
 package mypackage;
 import java.util.*;
 public class AppFrame {
+	
 	public static final int DEFAULT_NUMBER_OF_ROW_TO_DISPLAY=5;
 	private int numberOfRowToDiplay;
 	private int numPage;
 	
 	public void displayTable(Collection<Article> c, int row){
 		setNumberOfPage(c.size(),row);
+		//statements
 	}
 	
 	private void setNumberOfPage(int c,int row){

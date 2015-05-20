@@ -6,7 +6,7 @@ public class ArticleMgtApp extends AppFrame implements Process {
 	private Article article;
 	
 	public ArticleMgtApp() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	public int getCommand(String str){
 		System.out.print(str);
