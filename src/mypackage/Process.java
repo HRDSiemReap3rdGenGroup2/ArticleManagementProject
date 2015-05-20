@@ -7,7 +7,7 @@ public interface Process {
 	 * read the detail of book which have the given id
 	 * return null if not found
 	 */
-	Book read(int id);  
+	Article read(int id);  
 	/*
 	 * add new record to the collection
 	 * return true if success
@@ -18,13 +18,13 @@ public interface Process {
 	 * Id is unique, thus search by id return only one record
 	 * return null if not found
 	 */
-	Book searchById(int id);
+	Article searchById(int id);
 	/*
 	 * Both search by title and by author return collection of 
 	 * book because title and author can have more than one
 	 */
-	Collection<Book> searchByTitle(String title);
-	Collection<Book> searchByAuthor(String author);
+	Collection<Article> searchByTitle(String title);
+	Collection<Article> searchByAuthor(String author);
 	
 	boolean updateById(int id);
 	boolean updateByTitle(String title);

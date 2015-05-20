@@ -5,7 +5,7 @@ public class AppFrame {
 	private int numberOfRowToDiplay;
 	private int numPage;
 	
-	public void displayTable(Collection<Book> c, int row){
+	public void displayTable(Collection<Article> c, int row){
 		setNumberOfPage(c.size(),row);
 	}
 	

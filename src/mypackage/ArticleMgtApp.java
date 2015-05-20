@@ -2,8 +2,8 @@ package mypackage;
 
 import java.util.*;
 public class ArticleMgtApp extends AppFrame implements Process {
-	private Collection<Book> list;
-	private Book book;
+	private Collection<Article> list;
+	private Article article;
 	
 	public ArticleMgtApp() {
 		// TODO Auto-generated constructor stub
@@ -20,7 +20,7 @@ public class ArticleMgtApp extends AppFrame implements Process {
 		}
 	}
 	@Override
-	public Book read(int id) {
+	public Article read(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -32,19 +32,19 @@ public class ArticleMgtApp extends AppFrame implements Process {
 	}
 
 	@Override
-	public Book searchById(int id) {
+	public Article searchById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection<Book> searchByTitle(String title) {
+	public Collection<Article> searchByTitle(String title) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Collection<Book> searchByAuthor(String author) {
+	public Collection<Article> searchByAuthor(String author) {
 		// TODO Auto-generated method stub
 		return null;
 	}
