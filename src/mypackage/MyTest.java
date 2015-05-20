@@ -7,13 +7,23 @@ public class MyTest {
 	Article article;
 	MyTest(){
 		//add new
-		for(int i=0;i<10;i++){
+		for(int i=0;i<5;i++){
 			article=new Article(list, "my_title", "my_author", "my_content");
 			list.add(article);
 			article=null;
 		}
+
+		article=new Article(list, "my_title", "A", "my_content");
+		list.add(article);
+		article=null;	
+		
+		for(int i=0;i<4;i++){
+			article=new Article(list, "my_title", "my_author", "my_content");
+			list.add(article);
+			article=null;	
+		}
 		System.out.println("Add success!");
-//		//remove id = 5
+//		//remove id = 5======================================================
 //		int id=11;boolean found=false;
 //		Iterator<Article> it=list.iterator();
 //		while(it.hasNext()){
@@ -28,24 +38,40 @@ public class MyTest {
 //			System.out.println("Not found!");
 //		else
 //			System.out.println("Remove success!");
-		//remove author
-		String author="my_author";
-		boolean found1=false;
-		Iterator<Article> it1=list.iterator();
-		while(it1.hasNext()){
-			Article temp=(Article)it1.next();
-			if(temp.getAuthor()==author){
-				it1.remove();
-				found1=true;
+		//remove author========================================================
+//		String author="my_author";
+//		boolean found1=false;
+//		Iterator<Article> it1=list.iterator();
+//		while(it1.hasNext()){
+//			Article temp=(Article)it1.next();
+//			if(temp.getAuthor()==author){
+//				it1.remove();
+//				found1=true;
+//			}
+//		}
+//		if(found1!=true)
+//			System.out.println("Not found!");
+//		else
+//			System.out.println("Remove success!");
+//		
+//		
+		//display
+		displayAll();
+		//update id=5 ==========================================	
+		int id1=5;
+		ListIterator<Article> lit=((List)list).listIterator();
+		while(lit.hasNext()){
+			Article temp=(Article)lit.next();
+			if(id1==temp.getId()){
+				temp.setAuthor("AAAAA");
+				lit.set(temp);
+				break;
 			}
 		}
-		if(found1!=true)
-			System.out.println("Not found!");
-		else
-			System.out.println("Remove success!");
-		
-		
-		//display
+		System.out.println("Update success!");
+		displayAll();
+	}
+	public void displayAll(){
 		Object[] obj=list.toArray();
 		for(int i=0;i<obj.length;i++){
 			Article temp=(Article)obj[i];
